@@ -10,6 +10,7 @@ using System.Collections;
 
 using Aga.Controls.Tree.NodeControls;
 using Aga.Controls.Threading;
+using System.Diagnostics;
 
 
 namespace Aga.Controls.Tree
@@ -874,7 +875,15 @@ namespace Aga.Controls.Tree
 				node.IsExpandingNow = false;
 				_expandingNodes.Remove(node);
 				if (_expandingNodes.Count <= 0)
-					ExpandingIcon.Stop();
+				{
+					try
+					{
+						ExpandingIcon.Stop ();
+					}
+					catch (Exception ex) {
+						Debug.WriteLine (ex.ToString ());
+					}
+				}
 			}
 		}
 

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
-using Aga.Controls.Properties;
+using Aga.Controls;
 
 namespace Aga.Controls.Tree.NodeControls
 {

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E73BB233-D88B-44A7-A98F-D71EE158381D}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -19,8 +19,6 @@
     <SccProvider>
     </SccProvider>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -76,14 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GifDecoder.cs" />
-    <Compile Include="PerformanceAnalyzer.cs" />
     <Compile Include="ResourceHelper.cs" />
     <Compile Include="StringCollectionEditor.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="Threading\AbortableThreadPool.cs" />
     <Compile Include="Threading\WorkItemStatus.cs" />
@@ -210,6 +202,9 @@
     <Compile Include="Tree\TreeViewRowDrawEventArgs.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus.bmp" />
@@ -221,13 +216,13 @@
     <None Include="Resources\FolderClosed.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Tree\TreeViewAdv.resx">
+      <DependentUpon>TreeViewAdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resources.resx">
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tree\TreeViewAdv.resx">
-      <DependentUpon>TreeViewAdv.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

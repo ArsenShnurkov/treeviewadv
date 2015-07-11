@@ -239,7 +239,7 @@ namespace Aga.Controls.Tree
 
 		protected Size GetLabelSize(DrawContext context, string label)
 		{
-			PerformanceAnalyzer.Start("GetLabelSize");
+			//PerformanceAnalyzer.Start("GetLabelSize");
 
 			Font font = GetDrawingFont(context, label);
 			Size s = Size.Empty;
@@ -251,7 +251,7 @@ namespace Aga.Controls.Tree
 				s = new Size((int)Math.Ceiling(sf.Width), (int)Math.Ceiling(sf.Height));
 			}
 
-			PerformanceAnalyzer.Finish("GetLabelSize");
+			//PerformanceAnalyzer.Finish("GetLabelSize");
 
 			if (!s.IsEmpty)
 				return s;

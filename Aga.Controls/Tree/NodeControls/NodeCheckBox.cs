@@ -1,9 +1,9 @@
 using System;
 using System.Drawing;
-using Aga.Controls.Properties;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.ComponentModel;
+using Aga.Controls;
 
 namespace Aga.Controls.Tree.NodeControls
 {

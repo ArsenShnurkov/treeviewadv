@@ -5,8 +5,8 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using Aga.Controls.Properties;
 using System.ComponentModel;
+using Aga.Controls;
 
 namespace Aga.Controls.Tree.NodeControls
 {

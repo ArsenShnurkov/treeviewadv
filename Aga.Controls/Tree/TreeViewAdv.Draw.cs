@@ -63,8 +63,8 @@ namespace Aga.Controls.Tree
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            BeginPerformanceCount();
-			PerformanceAnalyzer.Start("OnPaint");
+            //BeginPerformanceCount();
+			//PerformanceAnalyzer.Start("OnPaint");
 
             DrawContext context = new DrawContext();
             context.Graphics = e.Graphics;
@@ -110,8 +110,8 @@ namespace Aga.Controls.Tree
             if (DragMode && _dragBitmap != null)
                 e.Graphics.DrawImage(_dragBitmap, PointToClient(MousePosition));
 
-			PerformanceAnalyzer.Finish("OnPaint");
-			EndPerformanceCount(e);
+			//PerformanceAnalyzer.Finish("OnPaint");
+			//EndPerformanceCount(e);
         }
 
 		private void DrawRow(PaintEventArgs e, ref DrawContext context, int row, Rectangle rowRect)
@@ -179,7 +179,7 @@ namespace Aga.Controls.Tree
 
 		private void DrawColumnHeaders(Graphics gr)
 		{
-			PerformanceAnalyzer.Start("DrawColumnHeaders");
+			//PerformanceAnalyzer.Start("DrawColumnHeaders");
 			ReorderColumnState reorder = Input as ReorderColumnState;
 			int x = 0;
 			if (Columns.Count > 0)
@@ -212,7 +212,7 @@ namespace Aga.Controls.Tree
 					TreeColumn.DrawDropMark(gr, new Rectangle(x, 0, 0, ColumnHeaderHeight));
 				gr.DrawImage(reorder.GhostImage, new Point(reorder.Location.X +  + reorder.DragOffset, reorder.Location.Y));
 			}
-			PerformanceAnalyzer.Finish("DrawColumnHeaders");
+			//PerformanceAnalyzer.Finish("DrawColumnHeaders");
 		}
 
 		public void DrawNode(TreeNodeAdv node, DrawContext context)
